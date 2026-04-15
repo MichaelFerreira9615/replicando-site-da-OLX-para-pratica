@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react'
+import Anuncios from '../components/Anuncios';
 
 export default function InicioPage () {
 
     const [state, setState] = useState(false)
 
-    // Replace javascript:void(0) paths with your paths
     const navigation = [
         { title: "Anúncios", path: "javascript:void(0)" },
         { title: "Meus anuncios", path: "javascript:void(0)" },
@@ -20,6 +20,7 @@ export default function InicioPage () {
     }, [])
 
     return (
+        <>
         <nav className={`bg-white pb-5 md:text-sm ${state ? "shadow-lg rounded-xl border mx-2 mt-2 md:shadow-none md:border-none md:mx-2 md:mt-0" : ""}`}>
             <div className="gap-x-14 items-center max-w-screen-xl mx-auto px-4 md:flex md:px-8">
                 <div className="flex items-center justify-between py-5 md:block">
@@ -77,5 +78,8 @@ export default function InicioPage () {
                 </div>
             </div>
         </nav>
+
+        <Anuncios/>
+        </>
     )
 }
