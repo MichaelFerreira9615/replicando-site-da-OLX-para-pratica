@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router";
 
 export default function LoginPage () {
 const [formLogin, setFormLogin] = useState({
@@ -28,7 +29,13 @@ function handleSubmitLogin(event){
                     <img src="https://blog.homer.com.br/wp-content/uploads/2020/03/Logo-OLX-500x265.png" width={150} className="mx-auto" />
                     <div className="mt-5 space-y-2">
                         <h3 className="text-gray-800 text-2xl font-bold sm:text-3xl">Faça o login na sua conta</h3>
-                        <p className="">não tem uma conta? <a href="javascript:void(0)" className="font-medium text-indigo-600 hover:text-indigo-500">Faça login</a></p>
+                        <p className="">não tem uma conta? 
+                        <Link to={"/cadastro"}
+                        className="font-medium text-indigo-600 hover:text-indigo-500"
+                        >
+                            Faça login
+                        </Link>
+                        </p>
                     </div>
                 </div>
                 <form

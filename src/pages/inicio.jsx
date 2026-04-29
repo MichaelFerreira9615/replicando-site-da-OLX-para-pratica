@@ -1,13 +1,14 @@
 import { useEffect, useState } from 'react'
 import Anuncios from '../components/Anuncios';
+import Footer from '../components/footer';
 
 export default function InicioPage () {
 
     const [state, setState] = useState(false)
 
     const navigation = [
-        { title: "Anúncios", path: "javascript:void(0)" },
-        { title: "Meus anuncios", path: "javascript:void(0)" },
+        { title: "Anúncios", path: "/" },
+        { title: "Meus anuncios", path: "/meusAnuncios" },
         { title: "Politica de uso", path: "javascript:void(0)" },
         { title: "Fale conosco", path: "javascript:void(0)" }
     ]
@@ -80,6 +81,7 @@ export default function InicioPage () {
         </nav>
 
         <Anuncios/>
+        <Footer/>
         </>
     )
 }
